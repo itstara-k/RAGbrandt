@@ -2,7 +2,7 @@
 This is the main program for the RAG art instructor chatbot (RAGbrandt). 
 '''
 
-__import__('pysqlite3')
+import('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
