@@ -21,9 +21,8 @@ import time
 #Set up the environment
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 load_dotenv()
-#gemini_api_key = os.getenv('GEMINI_API_KEY')
 
-#process_docs() --> Chroma database: Retrieve documents from the vector store and return them
+#process_docs() --> Chroma vector database: Retrieve documents from the vector store and return them
 def process_docs():
     embeddings_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     vector_store = Chroma(persist_directory=os.path.join(os.getcwd(), "vectordb"), embedding_function=embeddings_model)
@@ -34,7 +33,7 @@ def process_docs():
 #Create a Streamlit web app to host the chatbot with a few additional features
 
 #Configure and title the web app
-st.set_page_config(page_icon="🎨", page_title="RAG Art Instructor")
+st.set_page_config(page_icon="🎨", page_title="RAGbrandt ~ AI Art Instructor")
 st.title("🎨 RAGbrandt ~ AI Art Instructor")
 
 text_input_container = st.empty()
