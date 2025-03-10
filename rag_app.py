@@ -4,7 +4,6 @@ This is the main program for the RAG art instructor chatbot (RAGbrandt).
 import os
 import chromadb
 from dotenv import load_dotenv
-import google.generativeai as genai
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
