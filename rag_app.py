@@ -1,6 +1,11 @@
 '''
 This is the main program for the RAG art instructor chatbot (RAGbrandt). 
 '''
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import os
 import chromadb
 from dotenv import load_dotenv
@@ -13,11 +18,6 @@ import base64
 from io import BytesIO
 import streamlit as st
 import time
-
-
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 #Set up the environment
 chromadb.api.client.SharedSystemClient.clear_system_cache()
