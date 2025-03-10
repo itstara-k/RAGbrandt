@@ -2,10 +2,6 @@
 This is the main program for the RAG art instructor chatbot (RAGbrandt). 
 '''
 
-import('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 import os
 import chromadb
 from dotenv import load_dotenv
