@@ -42,8 +42,6 @@ if gemini_api_key != "":
     st.session_state.gemini_api_key = gemini_api_key
     #Initialize Google Gemini
     llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", api_key=gemini_api_key, temperature=0.5)
-    if not llm:
-        st.error("Invalid API key entered")
     text_input_container.empty()
 
     #Create image file uploader widget
